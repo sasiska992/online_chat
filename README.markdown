@@ -17,7 +17,7 @@
 
 [Дока PyWebIO](https://pywebio.readthedocs.io/en/latest/guide.html#)
 
-> [!NOTE] Что это такое?
+> Что это такое?
 > **PyWebIO** — это библиотека на Python, разработанная для создания веб-приложений с интерактивным пользовательским интерфейсом, не требуя глубоких знаний в веб-разработке. Она позволяет разработчикам быстро создавать веб-приложения и прототипы, используя простые команды Python.
 
 ### Основные характеристики PyWebIO:
@@ -52,7 +52,7 @@ if __name__ == '__main__':
 Это приложение запрашивает имя пользователя и приветствует его. Всего несколькими строками кода вы можете создать интерактивное веб-приложение!
 
 ## Что можно пощупать в input?
-> [!NOTE] Подключение
+## Подключение
 `from pywebio.input import *`
 ### Select
 ```python
@@ -75,11 +75,11 @@ text = textarea('ЗАГОЛОВОК', rows=РАЗМЕР_ОКНА_В_СТРОКА
 
 ### Валидация
 
-> [!NOTE] Функции валидации
+## Функции валидации
 > Если возвращено `None`, то валидация успешно пройдена, в противном случае вылезет ошибка
 
 
-> [!bug] Важно!
+## Важно!
 > `validate` принимает именно название функции, а не её вызов, поэтому, если нужно передать в `validate` функцию с параметрами, то мы будем использовать `lambda`
 
 
@@ -95,7 +95,7 @@ age = input("How old are you?", type=NUMBER, validate=check_age)
 
 ### Редактор кода
 
-> [!NOTE] Редактор
+### Редактор
 > Можно использовать параметр `code` в [pywebio.input.textarea()](https://pywebio.readthedocs.io/en/latest/input.html#pywebio.input.textarea "pywebio.input.textarea"), чтобы сделать редактор
 
 ```python
@@ -118,7 +118,7 @@ put_text(data['name'], data['age'])
 
 ## Что можно пощупать в output?
 
-> [!NOTE] Подключение
+### Подключение
 > `from pywebio.output import *`
 ### Отправка текста
 
@@ -144,12 +144,12 @@ popup('popup title', 'popup text content')
 
 ### Окошко с текстом
 
-> [!NOTE] put_scope
+## `put_scope`
 > По сути, это `div`, в который можно что-то запихивать
 >
 
 
-> [!NOTE] put_scrollable
+### `put_scrollable`
 > Создаём описание `scope`:
 > `Размер и тд`
 
@@ -161,7 +161,7 @@ put_scrollable(put_scope("chat"), height=300, keep_bottom=True)
 ```
 
 
-> [!attention] Важно
+### `Важно`
 > Можно и без `put_scrollable`
 
 ### Добавление текста в `scope`
@@ -179,7 +179,7 @@ clear("название_scope")
 ## Из оставшегося
 
 
-> [!NOTE] `run_async`
+### `run_async`
 > `from pywebio.session import run_async`
 > Запускает код асинхронно. После его выполнения нужно завершать асинхронный таск
 
@@ -189,7 +189,7 @@ clear_chat_task = run_async(clear_chat())
 clear_chat_task.close()
 ```
 
-> [!NOTE] run_js
+### `run_js`
 > `from pywebio.session import run_js`
 > Запускает `JavaScript` код
 
@@ -197,7 +197,7 @@ clear_chat_task.close()
 put_buttons(['Перезайти'], onclick=lambda btn: run_js('window.location.reload()'))
 ```
 
-> [!NOTE] put_audio
+### `put_audio`
 > `from pywebio_battery import put_audio`
 > Отправляет в браузер `audio` файл
 > - 1 параметр - бинарное представление файла
