@@ -1,4 +1,4 @@
-Этот чат разработан специально для школы [ENTERZION](enterzion.io)
+Этот чат разработан специально для школы [ENTERZION](https://enterzion.io/)
 
 В основе лежит библиотека PyWebIo
 
